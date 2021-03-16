@@ -5,7 +5,7 @@ class NODE:
     #LUsers is a list of ids of (users)
     def __init__(self,id,capaciteMemoire,LdonneesSL=None,LUsers=[],LNodeVoisin=[]):
         self.id=id
-        self.capaciteMemoire=capaciteMemoire
+        self.CapaciteMemoire=capaciteMemoire
         self.LdonneesSL=LdonneesSL
         self.LUsers=LUsers
         self.LNodeVoisin=[]
@@ -19,8 +19,8 @@ class NODE:
     def getId(self):
         return self.id
 
-    def getapaciteMemoire(self):
-        return self.apaciteMemoire
+    def getCapaciteMemoire(self):
+        return self.CapaciteMemoire
 
     def getLdonneesSL(self):
         return self.LdonneesSL
@@ -37,14 +37,3 @@ class NODE:
     def setLUsers(self,LUsers):
         self.LUsers=LUsers
 
-    def fill_data(self,data=[]):
-        data_filled=[]
-        data_left=[]
-        totalSize=0
-        for i in data:
-            totalSize=totalSize+i.getTaille
-            if self.capaciteMemoire>=totalSize:
-                data_filled.append(i.id)
-            else:
-                data_left.append(i)
-        return (data_filled,data_left)
