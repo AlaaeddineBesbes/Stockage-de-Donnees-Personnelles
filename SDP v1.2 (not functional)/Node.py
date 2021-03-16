@@ -37,14 +37,4 @@ class NODE:
     def setLUsers(self,LUsers):
         self.LUsers=LUsers
 
-    def fill_data(self,data=[]):
-        data_filled=[]
-        data_left=[]
-        totalSize=0
-        for i in data:
-            totalSize=totalSize+i.getTaille
-            if self.capaciteMemoire>=totalSize:
-                data_filled.append(i.id)
-            else:
-                data_left.append(i)
-        return (data_filled,data_left)
+    
